@@ -29,17 +29,18 @@ public class Program
             int segundos = now.Second;
 
             // Verifica se a hora e o minuto correspondem aos horários específicos
-            if ((hour == 0 && minute == 26) ||
-                (hour == 2 && minute == 26) ||
-                (hour == 4 && minute == 26) ||
-                (hour == 6 && minute == 26) ||
-                (hour == 8 && minute == 26) ||
-                (hour == 10 && minute == 26) ||
-                (hour == 12 && minute == 26) ||
-                (hour == 14 && minute == 26) ||
-                (hour == 16 && minute == 26) ||
-                (hour == 18 && minute == 26) ||
-                (hour == 20 && minute == 26))
+            if ((hour == 0 && minute == 25) ||
+                (hour == 2 && minute == 25) ||
+                (hour == 4 && minute == 25) ||
+                (hour == 6 && minute == 25) ||
+                (hour == 8 && minute == 25) ||
+                (hour == 10 && minute == 25) ||
+                (hour == 12 && minute == 25) ||
+                (hour == 14 && minute == 25) ||
+                (hour == 16 && minute == 25) ||
+                (hour == 18 && minute == 25) ||
+                (hour == 22 && minute == 25) ||
+                (hour == 20 && minute == 25))
             {
                 
                 ExecuteCode();
@@ -61,13 +62,59 @@ public class Program
         keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
 
 
-        Thread.Sleep(3000);
-        PressKeySequenceSpot("/cm");
+        // Digita "/"
+        keybd_event(0xBF, 0, 0, (UIntPtr)0); // Código da tecla "/"
+        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
+        keybd_event(0xBF, 0, KEYEVENTF_KEYUP, (UIntPtr)0); // Solta a tecla "/"
+
+        // Digita "c"
+        keybd_event(0x43, 0, 0, (UIntPtr)0); // Código da tecla "c"
+        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
+        keybd_event(0x43, 0, KEYEVENTF_KEYUP, (UIntPtr)0); // Solta a tecla "c"
+        keybd_event(0x4D, 0, 0, (UIntPtr)0); 
+
+        // Código da tecla "m"
+        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
+        keybd_event(0x4D, 0, KEYEVENTF_KEYUP, (UIntPtr)0); // Solta a tecla "m"
 
         //digita enter
          keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
         Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
         keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
+
+        Thread.Sleep(5000);
+
+        //digita enter
+         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+        Thread.Sleep(100); // Pequeno delay para garantir que a tecla é pressionada
+        keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
+      
+
+        // Digita "/"
+        keybd_event(0xBF, 0, 0, (UIntPtr)0); // Código da tecla "/"
+        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
+        keybd_event(0xBF, 0, KEYEVENTF_KEYUP, (UIntPtr)0); // Solta a tecla "/"
+
+        // Digita "c"
+        keybd_event(0x43, 0, 0, (UIntPtr)0); // Código da tecla "c"
+        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
+        keybd_event(0x43, 0, KEYEVENTF_KEYUP, (UIntPtr)0); // Solta a tecla "c"
+        
+        
+        // Código da tecla "m"
+        keybd_event(0x4D, 0, 0, (UIntPtr)0); 
+        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
+        keybd_event(0x4D, 0, KEYEVENTF_KEYUP, (UIntPtr)0); // Solta a tecla "m"
+
+        //digita enter
+         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
+        keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
+
+
+        Thread.Sleep(5000);
+
+
 
         Thread.Sleep(8000);
 
@@ -111,9 +158,17 @@ public class Program
         mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
         Thread.Sleep(5000);
 
-     
+        // move para o helper
+        SetCursorPos(651, 139); // ALTERAR AQUI
+        Thread.Sleep(3000);
 
-        Thread.Sleep(25 * 60 * 1000); // Espera 30 minutos ds acabar
+        // Clica no helper
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(100);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+     
+        Thread.Sleep(28 * 60 * 1000); // Espera 30 minutos ds acabar
 
         // Pressiona Enter para sair do ds
         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
@@ -121,7 +176,7 @@ public class Program
         keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
 
 
-        Thread.Sleep(1000);
+        Thread.Sleep(5000);
 
         //digita enter para digitar
          keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
@@ -130,14 +185,67 @@ public class Program
 
         Thread.Sleep(3000);
 
-            PressKeySequenceSpot("/kanturuvip11");
+            PressKeySequenceSpot("/kanturuvip23");
 
-        //digita enter mover
-        keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+        Thread.Sleep(3000);
+
+
+        //digita enter para digitar
+         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
+        keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);    
+
+         Thread.Sleep(3000);
+
+          //digita enter para digitar
+         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
         Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
         keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
 
-          Thread.Sleep(3000);
+        Thread.Sleep(3000);
+
+            PressKeySequenceSpot("/kanturuvip23");
+
+        Thread.Sleep(3000);
+
+
+        //digita enter para digitar
+         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
+        keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);    
+
+        Thread.Sleep(3000);
+
+        // Move até a posição do spot
+        SetCursorPos(581, 844);  // ALTERAR AQUI
+        Thread.Sleep(1000);
+
+        // Clica na posição do spot
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(50);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+        Thread.Sleep(1000);
+
+        // Move até a posição do spot 2
+        SetCursorPos(581, 844);   // ALTERAR AQUI
+        Thread.Sleep(1000);
+
+        // Clica na posição do spot 2
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(50);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+        Thread.Sleep(5000);    
+
+        // Move até a posição do spot 3
+        SetCursorPos(1184, 911);  // ALTERAR AQUI
+        Thread.Sleep(1000);
+
+        // Clica na posição do spot 3
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(50);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+        Thread.Sleep(5000);   
+
 
         // move para o helper
         SetCursorPos(651, 139); // ALTERAR AQUI
@@ -178,16 +286,15 @@ public class Program
             case '/': vk = 0xBF; break;
             case 'k': vk = 0x4B; break;
             case 'a': vk = 0x41; break;
-            case 'r': vk = 0x52; break;
-            case 'u': vk = 0x55; break;
-            case 't': vk = 0x54; break;
             case 'n': vk = 0x4E; break;
+            case 't': vk = 0x54; break;
+            case 'u': vk = 0x55; break;
+            case 'r': vk = 0x52; break;
             case 'v': vk = 0x56; break;
             case 'i': vk = 0x49; break;
             case 'p': vk = 0x50; break;
-            case '1': vk = 0x31; break;
-            case 'c': vk = 0x43; break;
-            case 'm': vk = 0x4D; break;
+            case '2': vk = 0x32; break;
+            case '3': vk = 0x33; break;
             default: break;
         }
         return vk;
