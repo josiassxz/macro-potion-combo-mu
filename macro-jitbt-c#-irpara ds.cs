@@ -29,18 +29,18 @@ public class Program
             int segundos = now.Second;
 
             // Verifica se a hora e o minuto correspondem aos horários específicos
-            if ((hour == 0 && minute == 25) ||
-                (hour == 2 && minute == 25) ||
-                (hour == 4 && minute == 25) ||
-                (hour == 6 && minute == 25) ||
-                (hour == 8 && minute == 25) ||
-                (hour == 10 && minute == 25) ||
-                (hour == 12 && minute == 25) ||
-                (hour == 14 && minute == 25) ||
-                (hour == 16 && minute == 25) ||
-                (hour == 18 && minute == 25) ||
-                (hour == 22 && minute == 25) ||
-                (hour == 20 && minute == 25))
+            if ((hour == 0 && minute == 27) ||
+                (hour == 2 && minute == 27) ||
+                (hour == 4 && minute == 27) ||
+                (hour == 6 && minute == 27) ||
+                (hour == 8 && minute == 27) ||
+                (hour == 10 && minute == 27) ||
+                (hour == 12 && minute == 27) ||
+                (hour == 14 && minute == 27) ||
+                (hour == 16 && minute == 27) ||
+                (hour == 18 && minute == 27) ||
+                (hour == 22 && minute == 27) ||
+                (hour == 20 && minute == 27))
             {
                 
                 ExecuteCode();
@@ -139,7 +139,7 @@ public class Program
         Thread.Sleep(10000);
 
         // Move até a posição do spot
-        SetCursorPos(1174, 389);  // ALTERAR AQUI
+        SetCursorPos(1473, 627);  // ALTERAR AQUI
         Thread.Sleep(1000);
 
         // Clica na posição do spot
@@ -148,15 +148,7 @@ public class Program
         mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
         Thread.Sleep(1000);
 
-        // Move até a posição do spot 2
-        SetCursorPos(1174, 389);  // ALTERAR AQUI
-        Thread.Sleep(1000);
-
-        // Clica na posição do spot 2
-        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-        Thread.Sleep(50);
-        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-        Thread.Sleep(5000);
+       
 
         // move para o helper
         SetCursorPos(651, 139); // ALTERAR AQUI
@@ -168,7 +160,7 @@ public class Program
         mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 
      
-        Thread.Sleep(28 * 60 * 1000); // Espera 30 minutos ds acabar
+        Thread.Sleep(26 * 60 * 1000); // Espera 30 minutos ds acabar
 
         // Pressiona Enter para sair do ds
         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
@@ -178,74 +170,36 @@ public class Program
 
         Thread.Sleep(5000);
 
-        //digita enter para digitar
-         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
-        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
-        keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
-
-        Thread.Sleep(3000);
-
             PressKeySequenceSpot("/kanturuvip23");
 
         Thread.Sleep(3000);
 
-
-        //digita enter para digitar
-         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
-        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
-        keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);    
-
-         Thread.Sleep(3000);
-
-          //digita enter para digitar
-         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
-        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
-        keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
-
-        Thread.Sleep(3000);
-
-            PressKeySequenceSpot("/kanturuvip23");
-
-        Thread.Sleep(3000);
-
-
-        //digita enter para digitar
-         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
-        Thread.Sleep(50); // Pequeno delay para garantir que a tecla é pressionada
-        keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);    
-
-        Thread.Sleep(3000);
-
-        // Move até a posição do spot
-        SetCursorPos(581, 844);  // ALTERAR AQUI
+        //mover cursor para clicar spot
+        SetCursorPos(445, 969); 
         Thread.Sleep(1000);
 
-        // Clica na posição do spot
+        //clicar no spot1
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(50);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+        Thread.Sleep(3000);
+
+        //clicar no spot2
         mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
         Thread.Sleep(50);
         mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
         Thread.Sleep(1000);
 
-        // Move até a posição do spot 2
-        SetCursorPos(581, 844);   // ALTERAR AQUI
+        //mover cursor para clicar spot3
+        SetCursorPos(1472, 781); 
         Thread.Sleep(1000);
 
-        // Clica na posição do spot 2
+        //clicar no spot3
         mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
         Thread.Sleep(50);
         mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-        Thread.Sleep(5000);    
-
-        // Move até a posição do spot 3
-        SetCursorPos(1184, 911);  // ALTERAR AQUI
         Thread.Sleep(1000);
-
-        // Clica na posição do spot 3
-        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-        Thread.Sleep(50);
-        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-        Thread.Sleep(5000);   
-
+ 
 
         // move para o helper
         SetCursorPos(651, 139); // ALTERAR AQUI
@@ -261,6 +215,13 @@ public class Program
 
     private static void PressKeySequenceSpot(string text)
     {
+         // Pressiona Enter
+        keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+        Thread.Sleep(50);
+        keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
+
+        Thread.Sleep(1000);
+
         foreach (char c in text)
         {
             byte vk = VkKeyScanSpot(c);
