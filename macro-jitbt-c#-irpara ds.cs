@@ -46,7 +46,7 @@ public class Program
                 ExecuteCode();
             }
 
-            // Verifica a cada minuto
+            // Verifica a cada 20 segundos
             Thread.Sleep(20000);
         }
     }
@@ -61,6 +61,8 @@ public class Program
          keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
         Thread.Sleep(200); // Pequeno delay para garantir que a tecla é pressionada
         keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
+
+        Thread.Sleep(2000);
       
 
         // Digita "/"
@@ -68,16 +70,22 @@ public class Program
         Thread.Sleep(200); // Pequeno delay para garantir que a tecla é pressionada
         keybd_event(0xBF, 0, KEYEVENTF_KEYUP, (UIntPtr)0); // Solta a tecla "/"
 
+         Thread.Sleep(2000);
+
         // Digita "c"
         keybd_event(0x43, 0, 0, (UIntPtr)0); // Código da tecla "c"
         Thread.Sleep(200); // Pequeno delay para garantir que a tecla é pressionada
         keybd_event(0x43, 0, KEYEVENTF_KEYUP, (UIntPtr)0); // Solta a tecla "c"
+
+         Thread.Sleep(2000);
         
         
         // Código da tecla "m"
         keybd_event(0x4D, 0, 0, (UIntPtr)0); 
         Thread.Sleep(200); // Pequeno delay para garantir que a tecla é pressionada
         keybd_event(0x4D, 0, KEYEVENTF_KEYUP, (UIntPtr)0); // Solta a tecla "m"
+
+         Thread.Sleep(2000);
 
         //digita enter
          keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
@@ -98,7 +106,7 @@ public class Program
         Thread.Sleep(8000);
 
         // Move para a posição ds 6
-        SetCursorPos(1421, 808); // ALTERAR AQUI
+        SetCursorPos(1359, 812); // ALTERAR AQUI
         Thread.Sleep(1000);
 
         // Clica na posição ds 6
@@ -109,6 +117,17 @@ public class Program
 
         // Move até a posição do spot
         SetCursorPos(1473, 627);  // ALTERAR AQUI
+        Thread.Sleep(1000);
+
+        // Clica na posição do spot
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(50);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+        Thread.Sleep(3000);
+
+         // Move até a posição do spot
+        SetCursorPos(1476, 669);  // ALTERAR AQUI
         Thread.Sleep(1000);
 
         // Clica na posição do spot
@@ -182,14 +201,14 @@ public class Program
 
     private static void PressKeySequenceSpot(string text)
     {
-        Thread.Sleep(2000);
+        Thread.Sleep(5000);
 
          // Pressiona Enter
         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
-        Thread.Sleep(50);
+        Thread.Sleep(100);
         keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
 
-        Thread.Sleep(1000);
+         Thread.Sleep(2000);
 
         foreach (char c in text)
         {
@@ -200,9 +219,11 @@ public class Program
             Thread.Sleep(100);
         }
 
+         Thread.Sleep(2000);
+
         // Pressiona Enter
         keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
-        Thread.Sleep(50);
+        Thread.Sleep(100);
         keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
     }
 
