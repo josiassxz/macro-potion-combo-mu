@@ -153,7 +153,6 @@ public class Program
 
 
         // Ativa a janela SuperMU se não estiver ativa
-        IntPtr hWnd = FindWindow("SuperMU", null);
         if (hWnd != IntPtr.Zero)
         {
             SetForegroundWindow(hWnd);
