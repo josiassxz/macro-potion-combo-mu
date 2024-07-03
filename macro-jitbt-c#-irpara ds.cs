@@ -103,7 +103,7 @@ public class Program
         Thread.Sleep(5000);
 
         // Move até o NPC
-        SetCursorPos(739, 209); // ALTERAR AQUI
+        SetCursorPos(813, 338); // ALTERAR AQUI
         Thread.Sleep(1000);
 
         // Clica no NPC
@@ -168,33 +168,6 @@ public class Program
         Thread.Sleep(5000);
 
         PressKeySequenceSpot("/kanturuvip23");
-
-        Thread.Sleep(3000);
-
-        // Mover cursor para clicar spot
-        SetCursorPos(445, 969);
-        Thread.Sleep(1000);
-
-        // Clicar no spot1
-        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-        Thread.Sleep(50);
-        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-        Thread.Sleep(3000);
-
-        // Clicar no spot2
-        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-        Thread.Sleep(50);
-        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-        Thread.Sleep(1000);
-
-        // Mover cursor para clicar spot3
-        SetCursorPos(1472, 781);
-        Thread.Sleep(1000);
-
-        // Clicar no spot3
-        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-        Thread.Sleep(50);
-        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 
         Thread.Sleep(3000);
 

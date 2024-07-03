@@ -1,0 +1,15 @@
+c:\Users\dpe\Desktop\pyDirectInput\bin\Debug\net8.0\pyDirectInput.exe
+C:\Users\dpe\Desktop\pyDirectInput\bin\Debug\net8.0\pyDirectInput.deps.json
+C:\Users\dpe\Desktop\pyDirectInput\bin\Debug\net8.0\pyDirectInput.runtimeconfig.json
+c:\Users\dpe\Desktop\pyDirectInput\bin\Debug\net8.0\pyDirectInput.dll
+c:\Users\dpe\Desktop\pyDirectInput\bin\Debug\net8.0\pyDirectInput.pdb
+c:\Users\dpe\Desktop\pyDirectInput\obj\Debug\net8.0\pyDirectInput.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\dpe\Desktop\pyDirectInput\obj\Debug\net8.0\pyDirectInput.AssemblyInfoInputs.cache
+c:\Users\dpe\Desktop\pyDirectInput\obj\Debug\net8.0\pyDirectInput.AssemblyInfo.cs
+c:\Users\dpe\Desktop\pyDirectInput\obj\Debug\net8.0\pyDirectInput.csproj.CoreCompileInputs.cache
+c:\Users\dpe\Desktop\pyDirectInput\obj\Debug\net8.0\pyDirectInput.sourcelink.json
+c:\Users\dpe\Desktop\pyDirectInput\obj\Debug\net8.0\pyDirectInput.dll
+c:\Users\dpe\Desktop\pyDirectInput\obj\Debug\net8.0\refint\pyDirectInput.dll
+c:\Users\dpe\Desktop\pyDirectInput\obj\Debug\net8.0\pyDirectInput.pdb
+C:\Users\dpe\Desktop\pyDirectInput\obj\Debug\net8.0\pyDirectInput.genruntimeconfig.cache
+C:\Users\dpe\Desktop\pyDirectInput\obj\Debug\net8.0\ref\pyDirectInput.dll

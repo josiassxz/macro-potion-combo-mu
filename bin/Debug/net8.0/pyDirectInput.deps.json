@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "pyDirectInput/1.0.0": {
+        "runtime": {
+          "pyDirectInput.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "pyDirectInput/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
