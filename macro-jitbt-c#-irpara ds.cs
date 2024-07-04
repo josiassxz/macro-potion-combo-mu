@@ -127,16 +127,14 @@ public class Program
         SetCursorPos(1487, 762); // ALTERAR AQUI
         Thread.Sleep(1000);
 
-
         Thread.Sleep(3000);
 
         // Pressiona a tecla Home
         keybd_event(0x24, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
         Thread.Sleep(50);
         keybd_event(0x24, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
-ca
-        Thread.Sleep(25 * 60 * 1000); // Espera 30 minutos ds acabar
 
+        Thread.Sleep(25 * 60 * 1000); // Espera 30 minutos ds acabar
 
         // Ativa a janela SuperMU se não estiver ativa
         if (hWnd != IntPtr.Zero)
@@ -163,10 +161,8 @@ ca
         keybd_event(0x24, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
     }
 
-
-       private static void ExecuteCodeBC()
+    private static void ExecuteCodeBC()
     {
-
         Thread.Sleep(3000);
 
         PressKeySequenceSpot("/igreja");
@@ -185,7 +181,7 @@ ca
         Thread.Sleep(2000);
 
         // Move para a posição do spot bc
-        SetCursorPos(1400, 760);
+        SetCursorPos(1066, 402);
         Thread.Sleep(1000);
 
         // Clica para entra bc
@@ -241,7 +237,7 @@ ca
 
         Thread.Sleep(3000);
 
-       PressKeySequenceSpot("/vulcanusvip12");
+        PressKeySequenceSpot("/vulcanusvip12");
 
         Thread.Sleep(3000);
 
@@ -249,8 +245,7 @@ ca
         keybd_event(0x24, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
         Thread.Sleep(50);
         keybd_event(0x24, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
-
-   
+    }
 
     private static void PressKeySequenceSpot(string text)
     {
@@ -280,7 +275,7 @@ ca
         keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
     }
 
-      private static byte VkKeyScanSpot(char ch)
+    private static byte VkKeyScanSpot(char ch)
     {
         byte vk = 0;
         switch (ch)
@@ -305,6 +300,4 @@ ca
         }
         return vk;
     }
-}
-
 }
