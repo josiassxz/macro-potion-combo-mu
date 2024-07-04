@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("pyDirectInput")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d3897ae95042a2a1a558cb22570adb4985be7b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92bc410a03a550de3859f348b98cbce0372782c2")]
 [assembly: System.Reflection.AssemblyProductAttribute("pyDirectInput")]
 [assembly: System.Reflection.AssemblyTitleAttribute("pyDirectInput")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

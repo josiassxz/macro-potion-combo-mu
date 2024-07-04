@@ -103,7 +103,7 @@ public class Program
         Thread.Sleep(5000);
 
         // Move até o NPC
-        SetCursorPos(813, 338); // ALTERAR AQUI
+        SetCursorPos(810, 334); // ALTERAR AQUI
         Thread.Sleep(1000);
 
         // Clica no NPC
@@ -113,34 +113,20 @@ public class Program
         Thread.Sleep(5000);
 
         // Move para a posição ds 6
-        SetCursorPos(1359, 812); // ALTERAR AQUI
+        SetCursorPos(1410, 880); // ALTERAR AQUI
         Thread.Sleep(1000);
 
         // Clica na posição ds 6
         mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
         Thread.Sleep(50);
         mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-        Thread.Sleep(10000);
+
+        Thread.Sleep(5000);
 
         // Move até a posição do spot
-        SetCursorPos(1473, 627); // ALTERAR AQUI
+        SetCursorPos(1487, 762); // ALTERAR AQUI
         Thread.Sleep(1000);
 
-        // Clica na posição do spot
-        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-        Thread.Sleep(50);
-        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
-
-        Thread.Sleep(3000);
-
-        // Move até a posição do spot
-        SetCursorPos(1476, 669); // ALTERAR AQUI
-        Thread.Sleep(1000);
-
-        // Clica na posição do spot
-        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
-        Thread.Sleep(50);
-        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 
         Thread.Sleep(3000);
 
@@ -148,7 +134,7 @@ public class Program
         keybd_event(0x24, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
         Thread.Sleep(50);
         keybd_event(0x24, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
-
+ca
         Thread.Sleep(25 * 60 * 1000); // Espera 30 minutos ds acabar
 
 
@@ -167,7 +153,7 @@ public class Program
 
         Thread.Sleep(5000);
 
-        PressKeySequenceSpot("/kanturuvip23");
+        PressKeySequenceSpot("/vulcanusvip12");
 
         Thread.Sleep(3000);
 
@@ -176,6 +162,95 @@ public class Program
         Thread.Sleep(50);
         keybd_event(0x24, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
     }
+
+
+       private static void ExecuteCodeBC()
+    {
+
+        Thread.Sleep(3000);
+
+        PressKeySequenceSpot("/igreja");
+
+        Thread.Sleep(2000);
+
+        // Move até o NPC
+        SetCursorPos(1080, 330); // ALTERAR AQUI
+        Thread.Sleep(1000);
+
+        // Clica no NPC
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(100);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+        Thread.Sleep(2000);
+
+        // Move para a posição do spot bc
+        SetCursorPos(1400, 760);
+        Thread.Sleep(1000);
+
+        // Clica para entra bc
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(100);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+        Thread.Sleep(2 * 60 * 1000); // Espera 2 minutos bc iniciar
+
+        // Move para a posição do spot bc
+        SetCursorPos(1230, 380);
+        Thread.Sleep(1000);
+
+        // Clica na posição do spot 1
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(100);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+        Thread.Sleep(3000);
+
+        // Clica na posição do spot 2
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(100);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+        Thread.Sleep(3000);
+
+        // Clica na posição do spot 3
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(100);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+        Thread.Sleep(3000);
+
+        // Clica na posição do spot 4
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(100);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+        Thread.Sleep(3000);
+
+        // Pressiona a tecla Home
+        keybd_event(0x24, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+        Thread.Sleep(100);
+        keybd_event(0x24, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
+
+        Thread.Sleep(16 * 60 * 1000); // Espera 16 minutos bc acabar
+
+        // Pressiona Enter para sair do bc
+        keybd_event(0x0D, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+        Thread.Sleep(100);
+        keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
+
+        Thread.Sleep(3000);
+
+       PressKeySequenceSpot("/vulcanusvip12");
+
+        Thread.Sleep(3000);
+
+        // Pressiona a tecla Home
+        keybd_event(0x24, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
+        Thread.Sleep(50);
+        keybd_event(0x24, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
+
+   
 
     private static void PressKeySequenceSpot(string text)
     {
@@ -205,23 +280,27 @@ public class Program
         keybd_event(0x0D, 0, KEYEVENTF_KEYUP, (UIntPtr)0);
     }
 
-    private static byte VkKeyScanSpot(char ch)
+      private static byte VkKeyScanSpot(char ch)
     {
         byte vk = 0;
         switch (ch)
         {
             case '/': vk = 0xBF; break;
-            case 'k': vk = 0x4B; break;
+            case 'v': vk = 0x56; break;
+            case 'u': vk = 0x55; break;
+            case 'l': vk = 0x4C; break;
+            case 'c': vk = 0x43; break;
             case 'a': vk = 0x41; break;
             case 'n': vk = 0x4E; break;
-            case 't': vk = 0x54; break;
-            case 'u': vk = 0x55; break;
-            case 'r': vk = 0x52; break;
-            case 'v': vk = 0x56; break;
+            case 's': vk = 0x53; break;
             case 'i': vk = 0x49; break;
             case 'p': vk = 0x50; break;
+            case 'g': vk = 0x47; break;
+            case 'r': vk = 0x52; break;
+            case 'e': vk = 0x45; break;
+            case 'j': vk = 0x4A; break;
+            case '1': vk = 0x31; break;
             case '2': vk = 0x32; break;
-            case '3': vk = 0x33; break;
             default: break;
         }
         return vk;
