@@ -104,7 +104,7 @@ public class Program
 
         // Move até o NPC
         SetCursorPos(810, 334); // ALTERAR AQUI
-        Thread.Sleep(1000);
+        Thread.Sleep(5000);
 
         // Clica no NPC
         mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
@@ -114,7 +114,7 @@ public class Program
 
         // Move para a posição ds 6
         SetCursorPos(1410, 880); // ALTERAR AQUI
-        Thread.Sleep(1000);
+        Thread.Sleep(2000);
 
         // Clica na posição ds 6
         mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
@@ -128,6 +128,14 @@ public class Program
         Thread.Sleep(1000);
 
         Thread.Sleep(3000);
+        
+        //clica na posição do spot
+         mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+        Thread.Sleep(50);
+        mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+         Thread.Sleep(3000);
+
 
         // Pressiona a tecla Home
         keybd_event(0x24, 0, KEYEVENTF_EXTENDEDKEY, (UIntPtr)0);
